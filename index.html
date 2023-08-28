@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Container Technology</title>
+<style>
+	* {
+		font-size: 1rem;
+		font-weight: normal;
+		font-family: arial;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		line-height: 150%;
+		color: #eaeae9;
+	
+	}
+
+	a:hover,
+	a:visited,
+	a {
+	color: #cacaeb;
+	}
+
+	hr {
+		margin: 1rem 0;
+	}
+
+	html {
+		min-height: 100%;
+		background: #2c2c20;
+	}
+
+	body {
+		min-height: 100vh;
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	hr {
+		border: none;
+	}
+
+	header,
+	.status {
+		max-width: 600px;
+	}
+
+	table {
+		width: 100%;
+		max-width: 100%;
+		border-collapse: collapse;
+	}
+
+	table thead td {
+		border-bottom: 1px solid #eaeae9;
+	}
+
+	h1 a {
+		color: #eaeae9 !important;
+		text-decoration: none;
+	}
+
+	.status {
+		border-radius: 2px;
+		border: 1px solid #33333382;
+		padding: 0.25rem 0.75rem;
+	}
+
+	.highlight--green {
+		background: #1b2313;
+	}
+
+	.services {
+		display: flex;
+		max-width: 1020px;
+		flex-flow: row nowrap;
+	}
+
+	.services canvas {
+		border-radius: 2px;
+		width: 300px;
+		height: 300px;
+		border: 1px solid #33333382;
+	}
+
+	.cache {
+		margin-top: 2rem;
+	}
+
+	.cache img {
+		width: 150px;
+	}
+
+	main {
+		flex-grow: 1;
+	}
+	
+	footer {
+		font-size: 12px;
+		justify-self: flex-end;
+	}
+
+	sup {
+		font-size: 10px;
+	}
+</style>
+
+<body>
+	<header>
+		<section class="tagline">
+			<h1>
+				<a href="https://contain.technology/zoe2000.pdf" target="_blank">Contain<span class="faded">er</span> Technology</a>
+			</h1>
+
+			<p><a href="mailto:e@contain.technology">e@contain.technology</a> (<a href="./e@contain.technology.asc">PGP</a>)</p>
+			<p>Federated infrastructure &#9679; software as fan fiction &#9679; tactical media R&D.</p>
+
+			<br/>
+
+			<p>
+				Container Technology is developing Bubble, a para<sup>1, 2</sup> protocol for collective curation and publishing.
+			<br/>
+			</p>
+		</section>
+	</header>
+
+	<hr />
+
+	<main>
+		<section class="status">
+			<table>
+				<thead>
+					<tr>
+						<td>service</td>
+						<td>status</td>
+						<td>federation</td>
+					</tr>
+				</thead>
+
+				<tr>
+					<td>
+						<a href="https://bubble.supply" target="_blank">Bubble</a>
+					</td>
+					<td class="highlight--green">up</td>
+					<td>
+						-
+					</td>
+				</tr>
+			</table>
+		</section>
+	</main>
+
+	<footer>
+		<sup>1</sup> short for parasitic<br>
+		<sup>2</sup> noun - ancillary
+	</footer>
+
+
+	<script>
+		const heading = document.querySelector('.faded');
+		const ogText = heading.innerHTML;
+
+		let wrappedText = '';
+
+		for (const letter of ogText) {
+			wrappedText += `<span style="opacity: ${(Math.floor(Math.random() * (6.5 - 4 + 1) + 4) * 0.1).toFixed(1)}">${letter}</span>`
+		}
+
+		heading.innerHTML = wrappedText;
+	</script>
+</body>
+</html>
+
